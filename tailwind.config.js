@@ -58,6 +58,7 @@ const config = {
           '5': 'hsl(var(--chart-5))'
         },
         txt01: '#333333',
+        txt02: '#b5b5b5',
         point01: '#5F0080',
       },
       fontFamily: {

@@ -58,8 +58,14 @@ const config: Config = {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
-  		}
+  			},
+			txt01: '#333333',
+			txt02: '#b5b5b5',
+			point01: '#5F0080',
+		},
+		fontFamily: {
+			notoSansKR : ["Noto Sans KR", 'sans-serif']
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
