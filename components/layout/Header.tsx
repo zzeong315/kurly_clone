@@ -3,6 +3,14 @@ import Link from 'next/link';
 import { KurlyLogo } from '@/components/icons/Logo';
 import Image from 'next/image';
 import { useState } from 'react';
+import {
+  CartIcon,
+  HeartIcon,
+  LocationIcon,
+  MenuIcon,
+  SearchIcon,
+} from '@/components/icons/HeaderIcons';
+import styles from '../styles/header.module.css';
 
 const userMenuList = [
   {
@@ -63,14 +71,29 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div>
-          <input placeholder={'search'} />
+        <div
+          className={
+            'flex items-center justify-between w-[400px] h-[48px] rounded-[6px] border border-solid border-point01 pr-2'
+          }
+        >
+          <input
+            placeholder={'검색어를 입력해주세요'}
+            className={'px-4 py-1 w-full focus:outline-none'}
+          />
+          <Image src={SearchIcon} alt={'search'} width={30} height={30} />
         </div>
 
-        <div>svg</div>
+        <div className={'flex space-x-[10px]'}>
+          <button className={styles.locationIcon}></button>
+          <Image src={LocationIcon} alt={'search'} width={36} height={36} />
+          <Image src={HeartIcon} alt={'heart'} width={36} height={36} />
+          <Image src={CartIcon} alt={'cart'} width={36} height={36} />
+        </div>
       </section>
       {/*category section*/}
-      <section className={'flex'}>categorys</section>
+      <section className={'flex'}>
+        <Image src={MenuIcon} alt={'menu'} width={14} height={16} />
+      </section>
     </header>
   );
 };
